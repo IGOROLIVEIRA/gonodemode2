@@ -10,9 +10,9 @@ class AppointmentController {
     const { date } = req.body
 
     await Appointment.create({
-      date,
       user_id: id,
-      provider_id: provider
+      provider_id: provider,
+      date
     })
     return res.redirect('/app/dashboard')
   }
